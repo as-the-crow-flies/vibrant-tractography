@@ -42,6 +42,8 @@ impl Gpu {
                 required_limits: Limits {
                     max_buffer_size: limits.max_buffer_size,
                     max_storage_buffer_binding_size: limits.max_storage_buffer_binding_size,
+                    max_storage_buffers_per_shader_stage: limits
+                        .max_storage_buffers_per_shader_stage,
                     ..Default::default()
                 },
                 required_features: Features::FLOAT32_FILTERABLE,
