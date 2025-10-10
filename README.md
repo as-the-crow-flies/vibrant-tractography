@@ -1,51 +1,20 @@
-VIBRANT
--------
+# VIBRANT Tractography
 
-Experimental Line Rendering Software
+🪩 Render your tracrography, vibrantly 🪩
 
-# How to Run
+---
 
-1. Ensure you have Rust installed on your system: https://rustup.rs/
+![Big Segmented Tractogram, rendered vibrantly](cover.png)
+
+[➡️ Click to run the Web Demo ⬅️](https://as-the-crow-flies.github.io/vibrant-tractography/) ([Ensure your Browser supports WebGPU](https://github.com/gpuweb/gpuweb/wiki/Implementation-Status))
+
+## File Format Support
+
+Currently, the application only supports loading one or more .tck files
+
+## How to Run natively
+
+Building and running the app natively generally gives better performance than the Web and only requires two steps:
+
+1. Ensure you have the Rust toolchain installed on your system using https://rustup.rs/
 2. Build and Run using `cargo run`
-
-# User Interface
-
-1. Settings - Opens Settings Side Panel
-2. Open - Allows Importing `.tck` and `.obj` line files
-3. Screenshot - Captures a Screenshot
-
-## Settings
-
-### Render Mode
-
-- RayTracing - Our Voxel Ray Tracing Method
-- RayTracingQuantized - Kanzler et al.
-- RasterizationOrderCorrecting - Groß and Gumhold
-- Rasterization - Baseline Rasterization
-
-### Display Mode
-
-- Geometry - Render Tube Geometry
-- Volume - Render Occupancy Volume
-
-### Voxelization Mode
-
-- Tube - Our Conservative Voxelization Method
-- Box - Axis Aligned Bounding Box Voxelization
-- Line - DDA Voxelization
-
-### Resolutions
-
-- Volume - Resolution of Occupancy Volume and A-Buffer
-
-### Appearance
-
-- Streamline Radius - Line Radius radius relative to voxel size
-- Lighting - How much lighting to apply
-- Ambient/Shadow - Contribution of Ambient Occlusion versus Direct Shadows
-- Tangent Color - Contribution of Tangent Coloring
-- Alpha - Line Alpha for all lines
-- Smoothing - Clamping Value for Phone-Wire Anti-Aliasing
-- Culling Slices - Number of slices for culling in RasterizationOrderCorrecting
-- Workgroups - How many work groups to launch (set equal to number of workgroups in your GPU for optimal performance)
-- Enable Culling - Turn Culling on/off
