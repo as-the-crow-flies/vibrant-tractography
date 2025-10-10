@@ -3,7 +3,7 @@ pub mod line;
 pub mod ui;
 pub mod wgsl;
 
-use crate::renderer::line::LineRenderer;
+use crate::{file::LineFile, renderer::line::LineRenderer};
 use environment::Environment;
 use pollster::FutureExt;
 use ui::UiRenderer;
@@ -32,7 +32,21 @@ impl Renderer {
             ui: UiRenderer::new(gpu),
 
             environment: Environment::new(gpu),
-            asset: Asset { line: None },
+            asset: Asset {
+                line: Some(LineSet::new(
+                    gpu,
+                    &LineFile::join(vec![
+                        LineFile::from_tck(include_bytes!("../../data/AF_left.tck")),
+                        LineFile::from_tck(include_bytes!("../../data/AF_right.tck")),
+                        LineFile::from_tck(include_bytes!("../../data/ATR_left.tck")),
+                        LineFile::from_tck(include_bytes!("../../data/ATR_right.tck")),
+                        LineFile::from_tck(include_bytes!("../../data/CST_left.tck")),
+                        LineFile::from_tck(include_bytes!("../../data/CST_right.tck")),
+                        LineFile::from_tck(include_bytes!("../../data/FPT_left.tck")),
+                        LineFile::from_tck(include_bytes!("../../data/FPT_right.tck")),
+                    ]),
+                )),
+            },
         }
     }
 

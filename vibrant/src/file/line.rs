@@ -58,7 +58,7 @@ impl LineFile {
         Self::from_lines(lines)
     }
 
-    pub fn from_tck(bytes: &[u8], stride: usize) -> LineFile {
+    pub fn from_tck(bytes: &[u8]) -> LineFile {
         let header: HashMap<String, String> = bytes
             .lines()
             .map(|line| line.unwrap())
@@ -85,7 +85,7 @@ impl LineFile {
         Self::from_lines(
             lines
                 .split(|vertex| !vertex.is_finite())
-                .map(|x| x.iter().step_by(stride).copied().collect())
+                .map(|x| x.iter().copied().collect())
                 .collect(),
         )
     }
@@ -147,11 +147,8 @@ impl LineFile {
         })
     }
 
-    pub fn from_tck_file(path: &str, stride: usize) -> LineFile {
-        LineFile::from_tck(
-            &fs::read(path).expect(&format!("Couldn't read file {:?}", path)),
-            stride,
-        )
+    pub fn from_tck_file(path: &str) -> LineFile {
+        LineFile::from_tck(&fs::read(path).expect(&format!("Couldn't read file {:?}", path)))
     }
 
     pub fn from_file(path: &str) -> LineFile {
@@ -159,7 +156,6 @@ impl LineFile {
             return match extension.to_str() {
                 Some("tck") => LineFile::from_tck(
                     &fs::read(path).expect(&format!("Couldn't read file {:?}", path)),
-                    1,
                 ),
                 Some("obj") => LineFile::from_obj(
                     &fs::read_to_string(path).expect(&format!("Couldn't read file {:?}", path)),

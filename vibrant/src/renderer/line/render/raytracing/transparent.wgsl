@@ -3,6 +3,7 @@
 
 @group(3) @binding(0) var<storage> OFFSET: array<u32>;
 @group(3) @binding(2) var<storage> INDEX: array<u32>;
+@group(3) @binding(3) var CULLING: texture_3d<f32>;
 
 var<private> COLOR: vec4<f32>;
 
@@ -18,6 +19,10 @@ fn visit(
     let count = textureLoad(COUNT, voxel, 0).x;
 
     if (count == 0) { return false; }
+
+    let culled = textureLoad(CULLING, voxel, 0).x < 1.0;
+
+    if (culled) { return true; }
 
     let offset = OFFSET[block_index(voxel, textureDimensions(DENSITY))] - count;
 

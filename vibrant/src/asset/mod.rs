@@ -1,6 +1,5 @@
 pub mod line;
 pub mod texture;
-pub mod utils;
 
 use line::LineSet;
 

@@ -3,6 +3,7 @@
 
 @group(3) @binding(0) var<storage> OFFSET: array<u32>;
 @group(3) @binding(2) var<storage> INDEX: array<u32>;
+@group(3) @binding(3) var CULLING: texture_3d<f32>;
 
 struct Hit {
     distance: f32,
@@ -23,6 +24,13 @@ fn visit(
     let count = textureLoad(COUNT, voxel, 0).x;
 
     if (count == 0) { return false; }
+
+    let culled = textureLoad(CULLING, voxel, 0).x < 1.0;
+
+    if (culled) {
+        HIT = Hit(distance, U32_MAX);
+        return true;
+    }
 
     let offset = OFFSET[block_index(voxel, textureDimensions(DENSITY))] - count;
 
@@ -45,7 +53,9 @@ fn visit(
 }
 
 fn result(origin: vec3<f32>, direction: vec3<f32>) -> vec4<f32> {
-    if (HIT.index == U32_MAX) { return vec4<f32>(0.0); }
+    if (HIT.index == U32_MAX) {
+        return vec4<f32>(0.0, 0.0, 0.0, select(0.0, 1.0, HIT.distance > 0.0));
+    }
 
     let v0 = unpack_vertex(LINE_VERTEX[HIT.index + 0]);
     let v1 = unpack_vertex(LINE_VERTEX[HIT.index + 1]);

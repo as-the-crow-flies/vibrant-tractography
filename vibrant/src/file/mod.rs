@@ -33,7 +33,7 @@ impl File {
                         .flatten();
 
                     if let Some(line) = match extension {
-                        Some("tck") => Some(LineFile::from_tck(&bytes, 1)),
+                        Some("tck") => Some(LineFile::from_tck(&bytes)),
                         Some("obj") => Some(LineFile::from_obj(&String::from_utf8(bytes).unwrap())),
                         _ => None,
                     } {
@@ -59,7 +59,7 @@ impl File {
                 .iter()
                 .filter_map(
                     |file| match file.extension().map(|ext| ext.to_str()).flatten() {
-                        Some("tck") => Some(LineFile::from_tck(&fs::read(file).unwrap(), 1)),
+                        Some("tck") => Some(LineFile::from_tck(&fs::read(file).unwrap())),
                         Some("obj") => Some(LineFile::from_obj(&fs::read_to_string(file).unwrap())),
                         _ => None,
                     },
