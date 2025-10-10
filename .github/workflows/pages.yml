@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, feature/deploy-pages]
 
 permissions:
   contents: read
@@ -29,7 +29,7 @@ jobs:
 
       - name: Build WASM package
         run: wasm-pack build --target web --out-dir dist/pkg
-  
+
       - name: Copy static files
         run: |
           cp index.html dist/
