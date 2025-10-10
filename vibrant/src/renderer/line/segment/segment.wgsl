@@ -11,8 +11,6 @@
 
 @group(2) @binding(0) var<uniform> ENVIRONMENT: Environment;
 
-const WORKGROUP_SIZE: u32 = 1024;
-
 @compute
 @workgroup_size(WORKGROUP_SIZE)
 fn main(@builtin(global_invocation_id) global: vec3<u32>) {

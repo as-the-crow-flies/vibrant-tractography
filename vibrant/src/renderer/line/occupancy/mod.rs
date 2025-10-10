@@ -79,7 +79,7 @@ impl LineOccupancyPipeline {
             ..Default::default()
         });
 
-        let n = frame.occupancy().pyramid().resolution().div_ceil(8);
+        let n = frame.occupancy().pyramid().resolution().div_ceil(4);
 
         pass.set_bind_group(0, frame.occupancy().binding_write(), &[]);
         pass.set_bind_group(1, line.binding(true), &[]);

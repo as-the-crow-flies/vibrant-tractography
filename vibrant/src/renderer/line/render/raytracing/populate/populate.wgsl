@@ -10,9 +10,6 @@
 
 @group(3) @binding(0) var<uniform> ENVIRONMENT: Environment;
 
-const WORKGROUP_SIZE: u32 = 1024;
-const CHUNK_SIZE: u32 = 32;
-
 var<workgroup> WORKGROUP_OFFSET: u32;
 
 @compute

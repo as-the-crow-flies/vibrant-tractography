@@ -34,6 +34,9 @@ struct Environment {
     settings: Settings
 }
 
+const WORKGROUP_SIZE: u32 = 256;
+const CHUNK_SIZE: u32 = 32;
+
 const U32_MAX: u32 = 4294967295;
 const U32_MAX_f32: f32 = f32(U32_MAX);
 const U32_MAX_INV: f32 = 1.0 / U32_MAX_f32;
