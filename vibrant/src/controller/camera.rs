@@ -22,9 +22,9 @@ impl Camera {
         Self {
             width: 1,
             height: 1,
-            yaw: 0.0,
-            pitch: 0.0,
-            distance: 0.75,
+            yaw: 0.43,
+            pitch: -0.46,
+            distance: 1.18,
             pan: Vec3::ZERO,
             fov: PI / 3.0,
             near: 0.01,
