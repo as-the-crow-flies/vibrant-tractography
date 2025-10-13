@@ -22,9 +22,26 @@ Running the app natively generally gives better performance than the Web. Buildi
 1. Ensure you have the Rust toolchain installed on your system using https://rustup.rs/
 2. Build and Run using `cargo run`
 
-## Cite this repository
+## Citing this repository
 
-If you use this software in your work, please cite it using \<CITATION COMING SOON\>
+If you use this software in your work, please cite the arXiv article:
+
+APA
+```
+Kraaijeveld, B., Jalba, A. C., Vilanova, A., & Chamberland, M. (2025). Real-Time Rendering of Dynamic Line Sets using Voxel Ray Tracing. arXiv preprint arXiv:2510.09081. https://doi.org/10.48550/arXiv.2510.09081
+```
+
+BibTeX
+```
+@article{Kraaijeveld2025RealTimeRendering,
+  author = {Kraaijeveld, Bram and Jalba, Andrei C. and Vilanova, Anna and Chamberland, Maxime},
+  doi = {10.48550/arXiv.2510.09081},
+  journal = {arXiv preprint arXiv:2510.09081},
+  title = {{Real-Time Rendering of Dynamic Line Sets using Voxel Ray Tracing}},
+  url = {https://arxiv.org/abs/2510.09081},
+  year = {2025}
+}
+```
 
 ## Issues
 
