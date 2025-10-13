@@ -1,0 +1,42 @@
+cff-version: "1.2.0"
+message: "If you use this work, please cite it as below."
+title: "Real-Time Rendering of Dynamic Line Sets using Voxel Ray Tracing"
+version: "v1"
+doi: "10.48550/arXiv.2510.09081"
+date-released: "2025-10-10"
+url: "https://arxiv.org/abs/2510.09081"
+authors:
+  - given-names: "Bram"
+    family-names: "Kraaijeveld"
+  - given-names: "Andrei C."
+    family-names: "Jalba"
+  - given-names: "Anna"
+    family-names: "Vilanova"
+  - given-names: "Maxime"
+    family-names: "Chamberland"
+abstract: |
+  Real-time rendering of dynamic line sets is relevant in many visualization tasks, including unsteady flow visualization and interactive white matter reconstruction from Magnetic Resonance Imaging. High-quality global illumination and transparency are important for conveying the spatial structure of dense line sets, yet remain difficult to achieve at interactive rates. We propose an efficient voxel-based ray-tracing framework for rendering large dynamic line sets with ambient occlusion and ground-truth transparency. The framework introduces a voxelization algorithm that supports efficient construction of acceleration structures for both voxel cone tracing and ray tracing. To further reduce per-frame preprocessing cost, we developed a voxel-based culling method that restricts acceleration structure construction to camera-visible voxels.
+keywords:
+  - "Graphics"
+  - "Visualization"
+  - "Ray Tracing"
+  - "Voxelization"
+license: "CC BY-SA 4.0"
+repository-code: "https://arxiv.org/abs/2510.09081"
+
+preferred-citation:
+  type: article
+  title: "Real-Time Rendering of Dynamic Line Sets using Voxel Ray Tracing"
+  authors:
+    - given-names: "Bram"
+      family-names: "Kraaijeveld"
+    - given-names: "Andrei C."
+      family-names: "Jalba"
+    - given-names: "Anna"
+      family-names: "Vilanova"
+    - given-names: "Maxime"
+      family-names: "Chamberland"
+  journal: "arXiv preprint arXiv:2510.09081"
+  year: 2025
+  doi: "10.48550/arXiv.2510.09081"
+  url: "https://arxiv.org/abs/2510.09081"
