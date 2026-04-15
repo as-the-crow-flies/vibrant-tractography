@@ -24,22 +24,25 @@ Running the app natively generally gives better performance than the Web. Buildi
 
 ## Citing this repository
 
-If you use this software in your work, please cite the arXiv article:
+If you use this software in your work, please cite the article:
 
 APA
 ```
-Kraaijeveld, B., Jalba, A. C., Vilanova, A., & Chamberland, M. (2025). Real-Time Rendering of Dynamic Line Sets using Voxel Ray Tracing. arXiv preprint arXiv:2510.09081. https://doi.org/10.48550/arXiv.2510.09081
+Kraaijeveld, B., Jalba, A. C., Vilanova, A., & Chamberland, M. (2026). Real‐Time Rendering of Dynamic Line Sets using Voxel Ray Tracing. Computer Graphics Forum, e70372. https://doi.org/10.1111/cgf.70372
 ```
 
 BibTeX
 ```
-@article{Kraaijeveld2025RealTimeRendering,
-  author = {Kraaijeveld, Bram and Jalba, Andrei C. and Vilanova, Anna and Chamberland, Maxime},
-  doi = {10.48550/arXiv.2510.09081},
-  journal = {arXiv preprint arXiv:2510.09081},
-  title = {{Real-Time Rendering of Dynamic Line Sets using Voxel Ray Tracing}},
-  url = {https://arxiv.org/abs/2510.09081},
-  year = {2025}
+@article{https://doi.org/10.1111/cgf.70372,
+author = {Kraaijeveld, B. and Jalba, A.C. and Vilanova, A. and Chamberland, M.},
+title = {Real-Time Rendering of Dynamic Line Sets using Voxel Ray Tracing},
+journal = {Computer Graphics Forum},
+volume = {n/a},
+number = {n/a},
+pages = {e70372},
+doi = {https://doi.org/10.1111/cgf.70372},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.70372},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.70372}
 }
 ```
 
