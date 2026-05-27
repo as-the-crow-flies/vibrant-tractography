@@ -1,5 +1,11 @@
 # VIBRANT Tractography
 
+> [!WARNING]
+> **This repository has been archived.**
+> Development has moved to [as-the-crow-flies/vibrant](https://github.com/as-the-crow-flies/vibrant), which renders your tractography (and NIfTI volumes) even more vibrantly!
+
+---
+
 🪩 Render your tracrography, vibrantly 🪩
 
 ---
