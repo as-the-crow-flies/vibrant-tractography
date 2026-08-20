@@ -1,0 +1,7 @@
+Real-Time Rendering of Dynamic Line Sets using Voxel Ray Tracing
+B. Kraaijeveld, A.C. Jalba, A. Vilanova, M. Chamberland
+
+MacOS/Linux/Window (cargo run)
+Web (https://as-the-crow-flies.github.io/vibrant-tractography/)
+
+We authorize the Graphics Replicability Stamp Initiative, its reproducibility committee, and the assigned reviewer to access and evaluate the materials submitted for review, and, after the stamp is approved, to publicly announce or otherwise advertise that the review was conducted and the submission received the stamp.
