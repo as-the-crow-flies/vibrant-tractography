@@ -55,3 +55,13 @@ eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.70372}
 ## Issues
 
 If you are experiencing any issues, please file an [issue on GitHub](https://github.com/as-the-crow-flies/vibrant-tractography/issues). Please note this is experimental software.
+
+## Replicating Results
+
+To replicate figure 9c (or equivalently Apendix Aa) please use the following steps:
+1. Clone this repository
+2. Install Rust using https://rustup.rs/
+3. Run 'cargo run' in the repository root
+4. An interactive rendering of the 'bundles small' dataset (figure 9c, Apendix Aa) will be presented
+
+Alternatively, to skip steps 1-3, navigate to https://as-the-crow-flies.github.io/vibrant-tractography/

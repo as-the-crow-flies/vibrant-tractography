@@ -5,11 +5,3 @@ MacOS/Linux/Window (cargo run)
 Web (https://as-the-crow-flies.github.io/vibrant-tractography/)
 
 We authorize the Graphics Replicability Stamp Initiative, its reproducibility committee, and the assigned reviewer to access and evaluate the materials submitted for review, and, after the stamp is approved, to publicly announce or otherwise advertise that the review was conducted and the submission received the stamp.
-
-To replicate figure 9c (or equivalently Apendix Aa) please use the following steps:
-1. Clone this repository
-2. Install Rust using https://rustup.rs/
-3. Run 'cargo run' in the repository root
-4. An interactive rendering of the 'bundles small' dataset (figure 9c, Apendix Aa) will be presented
-
-Alternatively, to skip steps 1-3, navigate to https://as-the-crow-flies.github.io/vibrant-tractography/
